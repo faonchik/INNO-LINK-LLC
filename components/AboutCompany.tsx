@@ -3,31 +3,22 @@ import Image from 'next/image';
 
 const AboutCompany: React.FC = () => {
   return (
-    <div className="relative w-full">
-      <div className="flex flex-row">
+    <div className="full-width">
+      <div className="flex flex-col xl:flex-row xl:items-start">
         {/* Левая колонка с изображением */}
-        <div 
-          className="relative" 
-          style={{
-            width: '634px',
-            height: '475px',
-            left: '0px',
-            top: '14px',
-            transformOrigin: 'center center'
-          }}
-        >
+        <div className="relative xl:w-[634px] xl:h-[475px]">
           <Image
             src="/assets/Company.png"
             alt="INNO LINK LLC"
             width={1000}
             height={600}
-            className="w-full sm:w-auto md:w-[960px] lg:w-full object-cover"
+            className="w-full h-auto object-cover"
             unoptimized
           />
         </div>
         
         {/* Правая колонка с текстом */}
-        <div className="flex flex-col pl-[21px] pt-[14px]">
+        <div className="flex flex-col xl:pl-[21px] xl:pt-[14px] mt-6 xl:mt-0">
           {/* Заголовок с логотипом */}
           <div className="flex items-center gap-4 mb-[30px]">
             <Image
@@ -35,13 +26,14 @@ const AboutCompany: React.FC = () => {
               alt="INNO LINK LLC Logo"
               width={110}
               height={109}
+              className="w-[110px] h-auto"
             />
-            <h2 className="text-[33px] font-normal">О КОМПАНИИ</h2>
+            <h2 className="section-title">О КОМПАНИИ</h2>
           </div>
           
           {/* Описание */}
           <div className="max-w-[511px]">
-            <p className="text-[27px] leading-[27px]">
+            <p className="section-text">
               <strong>INNO LINK LLC</strong> — это международная производственная компания, 
               специализирующаяся на выпуске <strong>высококачественных компонентов</strong> для 
               автомобильной, судостроительной и полупроводниковой промышленности. Благодаря 

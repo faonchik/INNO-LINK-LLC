@@ -1,15 +1,41 @@
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
 const Advantages = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.2
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
-    <section className="bg-white py-[60px]">
+    <section ref={sectionRef} className="bg-white py-[60px]">
       <div className="max-w-[1200px] mx-auto px-4 md:px-[60px]">
         <div className="xl:flex xl:items-center xl:justify-between">
           <div className="xl:w-1/2 xl:pr-8">
             <div className="mb-12 xl:mb-8">
-              <h2 className="text-[30px] font-bold mb-4">
+              <div style={{ fontSize: '30px', fontWeight: 600 }} data-customstyle="yes">
                 Наши преимущества
-              </h2>
+              </div>
               <p className="text-[18px] leading-[1.55] max-w-[600px]">
                 Мы стремимся к постоянному развитию и совершенствованию, предлагая качественные, надежные, быстрые и доступные решения в<br />индустрии.
               </p>
@@ -25,8 +51,8 @@ const Advantages = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-[16px] font-bold mb-2">Инновационные технологии</h3>
-                  <p className="text-[16px]">Используем передовые методы проектирования и производства.</p>
+                  <h3 className="text-[22px] font-bold mb-2">Инновационные технологии</h3>
+                  <p className="text-[20px]">Используем передовые методы проектирования и производства.</p>
                 </div>
               </div>
 
@@ -39,8 +65,8 @@ const Advantages = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-[16px] font-bold mb-2">Высочайшее качество</h3>
-                  <p className="text-[16px]">Многоуровневый контроль качества на каждом этапе позволяет нам предлагать продукцию высочайшего качества.</p>
+                  <h3 className="text-[22px] font-bold mb-2">Высочайшее качество</h3>
+                  <p className="text-[20px]">Многоуровневый контроль качества на каждом этапе позволяет нам предлагать продукцию высочайшего качества.</p>
                 </div>
               </div>
 
@@ -53,8 +79,8 @@ const Advantages = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-[16px] font-bold mb-2">Гибкий подход</h3>
-                  <p className="text-[16px]">Индивидуальная работа с клиентами и кастомизация продукции.</p>
+                  <h3 className="text-[22px] font-bold mb-2">Гибкий подход</h3>
+                  <p className="text-[20px]">Индивидуальная работа с клиентами и кастомизация продукции.</p>
                 </div>
               </div>
 
@@ -67,15 +93,15 @@ const Advantages = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-[16px] font-bold mb-2">Глобальное присутствие</h3>
-                  <p className="text-[16px]">Более 1000 парнеров по всему миру.</p>
+                  <h3 className="text-[22px] font-bold mb-2">Глобальное присутствие</h3>
+                  <p className="text-[20px]">Более 1000 парнеров по всему миру.</p>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="xl:w-1/2 mt-12 xl:mt-0">
-            <div className="w-full h-[146px] md:h-[400px] relative max-w-[280px] md:max-w-full mx-auto">
+            <div className="w-full h-[146px] md:h-[400px] xl:h-[293px] relative max-w-[280px] md:max-w-full xl:max-w-[560px] mx-auto">
               <Image
                 src="https://optim.tildacdn.com/tild3533-3636-4462-a661-343966636538/-/format/webp/WhatsApp_Image_2025-.jpeg"
                 alt="Global presence map"

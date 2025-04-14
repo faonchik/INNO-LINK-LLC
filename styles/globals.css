@@ -515,7 +515,6 @@
 
 /* Добавьте эти стили */
 section {
-  min-height: 510px;
   margin-bottom: 40px; /* Отступ между секциями */
 }
 
@@ -1170,8 +1169,8 @@ html {
   .t1106__content {
     padding: 0 !important;
   }
-  
-  .t1106 .max-w-[1200px] {
+
+  .t1106 .max-w-\[1200px\] {
     padding: 0 !important;
   }
 }

@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import Image from 'next/image';
 
 const images = [
   { url: "https://static.tildacdn.com/tild6632-6437-4933-a531-313833653333/1_Annular_Gear.png", alt: "Annular Gear" },
@@ -124,7 +125,7 @@ const ThreadedProducts = () => {
         <div className="hidden xl:flex xl:absolute xl:top-[170px] xl:left-[740px] 2xl:left-[980px] xl:space-x-4">
           <div className="text-center">
             <div className="circle w-[170px] h-[170px] flex items-center justify-center border border-[#032a62] rounded-full">
-              <div className="text-[14px]" style={{ lineHeight: '20px' }}>
+              <div className="text-[16px]" style={{ lineHeight: '20px' }}>
                 Высокотехнологичное<br />производство
               </div>
             </div>
@@ -134,7 +135,7 @@ const ThreadedProducts = () => {
 
           <div className="text-center">
             <div className="circle w-[170px] h-[170px] flex items-center justify-center border border-[#032a62] rounded-full">
-              <div className="text-[14px]" style={{ lineHeight: '20px' }}>
+              <div className="text-[16px]" style={{ lineHeight: '20px' }}>
                 Производство<br />индивидуальных<br />моделей
               </div>
             </div>
@@ -144,7 +145,7 @@ const ThreadedProducts = () => {
 
           <div className="text-center">
             <div className="circle w-[170px] h-[170px] flex items-center justify-center border border-[#032a62] rounded-full">
-              <div className="text-[14px]" style={{ lineHeight: '20px' }}>
+              <div className="text-[16px]" style={{ lineHeight: '20px' }}>
                 Высокое<br />качество
               </div>
             </div>

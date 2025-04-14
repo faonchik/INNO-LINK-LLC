@@ -40,30 +40,22 @@ const QualityControl: React.FC = () => {
   ];
 
   return (
-    <div 
-      className="py-[60px] bg-[#032a62]" 
-      ref={sectionRef}
-    >
-      <div className="container mx-auto px-4">
-        <div className="max-w-[560px] mx-auto text-center text-white">
-          <h2 
-            className={`text-[30px] mb-[40px] md:mb-[20px] ${isVisible ? 'animate-fadeinup' : 'opacity-0'}`}
-          >
+    <div className="py-[60px] bg-[#032a62]" ref={sectionRef}>
+      <div className="max-w-[1200px] mx-auto px-4">
+        <div className="text-center mb-10">
+          <h2 className="text-[30px] text-white mb-[40px] md:mb-[20px]">
             Контроль качества
           </h2>
-          <p 
-            className={`text-[20px] mb-[105px] md:mb-[45px] ${isVisible ? 'animate-fadeinup' : 'opacity-0'}`}
-            style={{ animationDelay: '0.2s' }}
-          >
+          <div className="text-[20px] text-white max-w-[560px] mx-auto mb-[90px] md:mb-[45px]">
             Наша <strong>система управления качеством</strong> включает несколько уровней проверки:
-          </p>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1000px] mx-auto">
           {checkItems.map((item, index) => (
             <div 
               key={index}
-              className={`flex items-start gap-4 ${isVisible ? 'animate-fadeinup' : 'opacity-0'}`}
+              className="flex items-start gap-4"
               style={{ animationDelay: `${(index + 2) * 0.2}s` }}
             >
               <img
@@ -78,6 +70,21 @@ const QualityControl: React.FC = () => {
           ))}
         </div>
       </div>
+      <style jsx>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-fadeIn {
+          animation: fadeIn 0.5s ease-out forwards;
+        }
+      `}</style>
     </div>
   );
 };

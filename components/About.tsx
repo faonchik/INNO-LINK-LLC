@@ -1,43 +1,61 @@
+import React from 'react';
+
 const About = () => {
   return (
-    <>
-      <section id="about" className="py-16 bg-white">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-            {/* Изображение - теперь будет сверху на планшетах */}
-            <div className="h-full order-1 lg:order-1">
-              <img
-                src="/assets/Company.png"
-                alt="INNO LINK LLC"
-                className="w-full h-full object-cover"
-                style={{ maxHeight: '600px' }}
+    <section id="about" className="bg-white">
+      <div className="max-w-[1920px] mx-auto">
+        <div className="flex flex-col 2xl:flex-row gap-[10px] items-start">
+          {/* Левая колонка с изображением */}
+          <div className="w-full 2xl:w-[1014px]">
+            <div 
+              className="w-full h-[760px] bg-cover bg-center"
+              style={{
+                backgroundImage: 'url("https://static.tildacdn.com/tild6531-3965-4162-b464-353964643334/WhatsApp_Image_2025-.jpeg")'
+              }}
+            />
+          </div>
+
+          {/* Правая колонка с текстом */}
+          <div className="w-full 2xl:w-[800px] pl-[10px]">
+            <div className="flex items-center">
+              <img 
+                src="https://optim.tildacdn.com/tild3832-3530-4263-a564-383539636336/-/resize/132x/-/format/webp/image.png"
+                alt="INNO LINK LLC Logo"
+                className="w-[176px] h-[128px] object-contain mr-[10px]"
               />
+              <div 
+                className="tn-atom text-[42px] font-bold"
+                style={{ 
+                  transformOrigin: 'center center',
+                  lineHeight: '46px'
+                }}
+              >
+                О КОМПАНИИ
+              </div>
             </div>
-
-            {/* Текстовый контент */}
-            <div className="flex flex-col p-8 order-2 lg:order-2">
-              <div className="flex items-center gap-4 mb-[30px]">
-                <img
-                  src="/assets/LOGO_INNO_LINK_LLC-P.png"
-                  alt="INNO LINK LLC Logo"
-                  width={110}
-                  height={109}
-                  className="w-[90px] h-[65px] hidden lg:block xl:w-[120px] xl:h-[80px] 2xl:w-[140px] 2xl:h-[95px]"
-                />
-                <h2 className="text-[30px] md:text-[62px] font-bold leading-[68px]" style={{ transformOrigin: 'center center' }}>О КОМПАНИИ</h2>
-              </div>
-
-              <div>
-                <p className="text-[27px] leading-[1.4]">
-                  <strong>INNO LINK LLC</strong> — это международная производственная компания, специализирующаяся на выпуске <strong>высококачественных компонентов</strong> для автомобильной, судостроительной и полупроводниковой промышленности. Благодаря современным технологиям и строгому контролю качества компания обеспечивает надежность и долговечность своей продукции.
-                </p>
-              </div>
+            <div 
+              className="text-[30px] mt-[60px]" 
+              style={{ 
+                transformOrigin: 'center center',
+                lineHeight: '50px',
+                verticalAlign: 'middle',
+                color: '#000000',
+                fontFamily: 'Arial, Arial, sans-serif',
+                fontWeight: 500,
+                letterSpacing: '-0.5px',
+                backgroundColor: 'transparent',
+                borderColor: 'transparent',
+                borderStyle: 'solid',
+                wordBreak: 'normal'
+              }}
+            >
+              <strong className="text-[32px]">INNO LINK LLC</strong> — это международная производственная компания, специализирующаяся на выпуске <strong>высококачественных компонентов</strong> для автомобильной, судостроительной и полупроводниковой промышленности. Благодаря современным технологиям и строгому контролю качества компания обеспечивает надежность и долговечность своей продукции.
             </div>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 
-export default About; 
+export default About;

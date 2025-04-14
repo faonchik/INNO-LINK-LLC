@@ -93,7 +93,7 @@ const KeyDirections: React.FC = () => {
               data-animate-group="yes"
               style={{ transitionDelay: '0s' }}
             >
-              <div style={{ fontSize: '30px' }}>Наши ключевые направления</div>
+              <div style={{ fontSize: '30px', fontWeight: 600 }}>Наши ключевые направления</div>
             </div>
           </div>
           

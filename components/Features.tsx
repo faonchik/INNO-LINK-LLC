@@ -50,22 +50,18 @@ const Features: React.FC = () => {
   ];
 
   return (
-    <section className="bg-white py-[60px] px-[60px]">
-      <div className="max-w-[1200px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8">
+    <div className="w-full">
+      <div className="container mx-auto px-4">
+        <h2 className="text-[32px] font-bold text-center mb-12">Наши преимущества</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div 
-              key={index}
-              className={`flex flex-col ${isVisible ? 'animate-fadeIn' : ''}`}
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              <h3 className="text-[20px] font-bold mb-2">
-                {feature.title}
-              </h3>
-              <div className="w-full h-[2px] bg-[#032a62] mb-4" />
-              <p className="text-[16px] leading-[1.55]">
-                {feature.description}
-              </p>
+            <div key={index} className="flex items-start space-x-4">
+              <div className="text-[#032A62] text-2xl">✓</div>
+              <div>
+                <h3 className="text-[20px] font-bold mb-2">{feature.title}</h3>
+                <div className="w-full h-[2px] bg-[#032a62] mb-4"></div>
+                <p className="text-[16px]">{feature.description}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -85,7 +81,7 @@ const Features: React.FC = () => {
           animation: fadeIn 0.5s ease-out forwards;
         }
       `}</style>
-    </section>
+    </div>
   );
 };
 
