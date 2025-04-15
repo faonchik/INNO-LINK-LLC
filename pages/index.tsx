@@ -84,26 +84,26 @@ const Home: NextPage = () => {
           <div className="w-full">
             {/* t-cover__wrapper */}
             <div 
-              className="flex flex-col items-center relative z-[1] pt-[60px] xs:pt-[80px] sm:pt-[100px] md:items-start"
+              className="flex flex-col items-center relative z-[1] pt-[60px] xs:pt-[80px] sm:pt-[100px] md:pt-[0px] justify-center md:items-start"
               style={{ height: '929px' }}
             >
-              <div className="t181">
+              <div className="flex items-center">
                 <div data-hook-content="covercontent">
                   <div>
                     <HeroTitle />
 
                     {/* Кнопки */}
-                    <div className="t181__button-wrapper flex flex-col md:flex-row" style={{ marginTop: '60px' }}>
-                      <div className="pl-[0px] xs:pl-[20px] sm:pl-[40px] md:pl-[70px] xs:gap-4 sm:gap-5 flex-col xs:flex-row">
+                    <div className="t181__button-wrapper" style={{ marginTop: '60px' }}>
+                      <div className="flex pl-[0px] xs:pl-[20px] sm:pl-[40px] md:pl-[70px] gap-3 xs:gap-4 sm:gap-5 flex-col xs:flex-row">
                         <a 
                           href="#rec928394316"
-                          className="t-btn inline-flex items-center m-3 justify-center w-[220px] xs:w-[220px] sm:w-[240px] h-[60px] xs:h-[70px] sm:h-[80px] text-[#032a62] bg-white hover:bg-gray-100 transition-colors text-[16px] sm:text-[18px]"
+                          className="t-btn inline-flex items-center justify-center w-[200px] xs:w-[220px] sm:w-[240px] h-[60px] xs:h-[70px] sm:h-[80px] text-[#032a62] bg-white hover:bg-gray-100 transition-colors text-[16px] sm:text-[18px]"
                         >
                           <span className="block w-full text-center">Продукты</span>
                         </a>
                         <a 
                           href="#rec933317711"
-                          className="t-btn inline-flex items-center m-3 justify-center w-[200px] xs:w-[220px] sm:w-[240px] h-[60px] xs:h-[70px] sm:h-[80px] text-[#032a62] bg-white hover:bg-gray-100 transition-colors text-[16px] sm:text-[18px]"
+                          className="t-btn inline-flex items-center justify-center w-[200px] xs:w-[220px] sm:w-[240px] h-[60px] xs:h-[70px] sm:h-[80px] text-[#032a62] bg-white hover:bg-gray-100 transition-colors text-[16px] sm:text-[18px]"
                         >
                           <span className="block w-full text-center">Контакты</span>
                         </a>

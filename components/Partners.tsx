@@ -41,7 +41,7 @@ const Partners = () => {
       <div className="t-container t-card__container relative z-20">
         <div className="flex flex-col items-center justify-center pb-12">
           <div className="t1074__textwrapper text-center mb-12 mt-[100px] md:mt-0">
-            <div className="text-[30px] text-black font-[Arial] md:mb-16 md:mt-0 ">
+            <div className="text-[30px] text-black font-[Arial] md:mb-16 md:mt-12 ">
               Партнеры
             </div>
           </div>
