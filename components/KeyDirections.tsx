@@ -54,7 +54,7 @@ const KeyDirections: React.FC = () => {
           viewBox="0 0 1280 200" 
           preserveAspectRatio="none"
           className="relative block w-full rotate-180"
-          style={{ height: '8vw' }}
+          style={{ height: '15vw' }}
         >
           <path 
             d="M0 200h1280V0L0 195.5V200z"
@@ -136,7 +136,7 @@ const KeyDirections: React.FC = () => {
           viewBox="0 0 1280 200" 
           preserveAspectRatio="none"
           className="relative block w-full"
-          style={{ height: '8vw' }}
+          style={{ height: '15vw' }}
         >
           <path 
             d="M0 200h1280V0L0 195.5V200z"

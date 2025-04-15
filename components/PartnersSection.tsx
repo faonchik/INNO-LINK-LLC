@@ -15,18 +15,14 @@ const PartnersSection = () => {
           backgroundAttachment: 'scroll'
         }}
       />
-
-      {/* Контент с партнерами */}
       <div className="relative z-10 h-full">
-        <div className="t-container max-w-[1200px] mx-auto px-5 h-full">
-          <div className="flex flex-col items-center justify-center h-full">
-            <div className="t1074__textwrapper mb-12">
-              <div className="text-[30px] text-black text-center font-[Arial]">
-                Партнеры
-              </div>
+           
             </div>
 
             {/* Первый ряд */}
+            <div className="text-[30px] !text-white text-center font-[Arial]">
+                Партнеры
+              </div>
             <div className="grid grid-cols-2 md:grid-cols-6 gap-8 mb-8 w-full">
               {partners.slice(0, 6).map((partner, index) => (
                 <div key={index} className="flex items-center justify-center">
@@ -51,10 +47,9 @@ const PartnersSection = () => {
                 </div>
               ))}
             </div>
-          </div>
+    
         </div>
-      </div>
-    </div>
+  
   );
 };
 

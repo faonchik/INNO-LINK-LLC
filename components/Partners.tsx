@@ -15,7 +15,7 @@ const Partners = () => {
   ];
 
   return (
-    <div id="partners" className="relative h-[697px]">
+    <div id="partners" className="relative">
       {/* Фоновое изображение */}
       <div 
         className="t-cover__carrier absolute inset-0"
@@ -24,7 +24,7 @@ const Partners = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'scroll',
-          height: '697px'
+          height: '100%'
         }}
       />
 
@@ -32,16 +32,16 @@ const Partners = () => {
       <div 
         className="t-cover__filter absolute inset-0"
         style={{
-          height: '697px',
+          height: '100%',
           backgroundColor: 'rgba(153, 153, 153, 0.5)' // #999999 с прозрачностью 50%
         }}
       />
 
       {/* Контент с партнерами */}
-      <div className="t-container t-card__container relative z-20 h-full">
-        <div className="flex flex-col items-center justify-center h-full">
-          <div className="t1074__textwrapper text-center mb-12">
-            <div className="text-[30px] text-black font-[Arial] mb-16">
+      <div className="t-container t-card__container relative z-20">
+        <div className="flex flex-col items-center justify-center pb-12">
+          <div className="t1074__textwrapper text-center mb-12 mt-[100px] md:mt-0">
+            <div className="text-[30px] text-black font-[Arial] md:mb-16 md:mt-0 ">
               Партнеры
             </div>
           </div>

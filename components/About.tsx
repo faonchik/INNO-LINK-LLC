@@ -17,7 +17,7 @@ const About = () => {
 
           {/* Правая колонка с текстом */}
           <div className="w-full 2xl:w-[800px] pl-[10px]">
-            <div className="flex items-center">
+            <div className="flex flex-col md:flex-row items-start justify-center items-center gap-12 mt-12">
               <img 
                 src="https://optim.tildacdn.com/tild3832-3530-4263-a564-383539636336/-/resize/132x/-/format/webp/image.png"
                 alt="INNO LINK LLC Logo"

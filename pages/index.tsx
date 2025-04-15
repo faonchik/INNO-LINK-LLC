@@ -15,6 +15,7 @@ import CoverImage from '@/components/CoverImage';
 import Partners from '@/components/Partners';
 import FAQ from '../components/FAQ';
 import About from '../components/About';
+import HeroTitle from '../components/HeroTitle';
 
 const Home: NextPage = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -78,57 +79,31 @@ const Home: NextPage = () => {
         />
 
         {/* t-container */}
-        <div className="container mx-auto">
+        <div className="mx-auto pt-[120px] xs:pt-[100px] sm:pt-[60px] md:pt-0">
           {/* t-col t-col_8 */}
-          <div className="w-full lg:w-8/12">
+          <div className="w-full">
             {/* t-cover__wrapper */}
             <div 
-              className="flex items-center relative z-[1]"
+              className="flex flex-col items-center relative z-[1] pt-[60px] xs:pt-[80px] sm:pt-[100px] md:items-start"
               style={{ height: '929px' }}
             >
-              <div className="t181 w-full">
+              <div className="t181">
                 <div data-hook-content="covercontent">
-                  <div className="t181__wrapper">
-                    {/* Заголовок */}
-                    <div className="t181__title">
-                      <div 
-                        className="text-center"
-                        style={{ fontSize: '72px' }}
-                      >
-                        <span 
-                          className="text-white font-normal"
-                          style={{ 
-                            color: 'rgb(255, 255, 255)', 
-                            fontWeight: 400
-                          }}
-                        >
-                          INNO LINK LLC
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* Подзаголовок */}
-                    <div className="t181__descr text-center mt-4">
-                      <span 
-                        className="text-[20px] text-white"
-                        style={{ color: 'rgb(255, 255, 255)' }}
-                      >
-                        Технологии будущего, качество без компромиссов!
-                      </span>
-                    </div>
+                  <div>
+                    <HeroTitle />
 
                     {/* Кнопки */}
-                    <div className="t181__button-wrapper" style={{ marginTop: '60px' }}>
-                      <div className="flex justify-center gap-5">
+                    <div className="t181__button-wrapper flex flex-col md:flex-row" style={{ marginTop: '60px' }}>
+                      <div className="pl-[0px] xs:pl-[20px] sm:pl-[40px] md:pl-[70px] xs:gap-4 sm:gap-5 flex-col xs:flex-row">
                         <a 
                           href="#rec928394316"
-                          className="t-btn inline-flex items-center justify-center w-[200px] h-[60px] text-[#032a62] bg-white hover:bg-gray-100 transition-colors"
+                          className="t-btn inline-flex items-center m-3 justify-center w-[220px] xs:w-[220px] sm:w-[240px] h-[60px] xs:h-[70px] sm:h-[80px] text-[#032a62] bg-white hover:bg-gray-100 transition-colors text-[16px] sm:text-[18px]"
                         >
                           <span className="block w-full text-center">Продукты</span>
                         </a>
                         <a 
                           href="#rec933317711"
-                          className="t-btn inline-flex items-center justify-center w-[200px] h-[60px] text-[#032a62] bg-white hover:bg-gray-100 transition-colors"
+                          className="t-btn inline-flex items-center m-3 justify-center w-[200px] xs:w-[220px] sm:w-[240px] h-[60px] xs:h-[70px] sm:h-[80px] text-[#032a62] bg-white hover:bg-gray-100 transition-colors text-[16px] sm:text-[18px]"
                         >
                           <span className="block w-full text-center">Контакты</span>
                         </a>
